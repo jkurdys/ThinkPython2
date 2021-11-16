@@ -8,14 +8,10 @@ def square(t, l):
 
 def polygon(t, l, n):
     a = 360/n
-    polyline(t, l, n, a)
+    polyline(t, n, l, a)
     
 def circle(t, r):
-    circ = 2 * pi * r
-    n = int(circ/3) + 1
-    l = circ / n
-
-    polygon(t, l, n)
+    arc(t, r, 360)
 
 def arc(t, r, angle):
     arc_l = (angle/360) * (2 * pi * r)
@@ -34,11 +30,6 @@ if __name__ == '__main__':
 
     bob = turtle.Turtle()
     
-    ls = range(1,100,5)
-    
-    for l in ls:
-        # square(bob, l)
-        # circle(bob, l)
-        arc(bob, l, 90)
+    polygon(bob, 100, 5)
 
     turtle.mainloop()

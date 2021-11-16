@@ -58,8 +58,9 @@ def arc(t, r, angle):
     """
     arc_length = 2 * math.pi * r * abs(angle) / 360
     n = int(arc_length / 4) + 3
-    step_length = arc_length / n
+    step_length = arc_length / n 
     step_angle = float(angle) / n
+    
 
     # making a slight left turn before starting reduces
     # the error caused by the linear approximation of the arc
